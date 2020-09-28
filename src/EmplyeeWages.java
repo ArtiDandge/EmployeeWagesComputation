@@ -21,8 +21,8 @@ public class EmplyeeWages {
 		
 		// Variables
 				int totalHours=0;
-				
-
+				int daily_wage=0;
+			
 		System.out.println("Welcome to Employee Wage Computation Program");
 		
 		// TYPE CASTING - external
@@ -30,20 +30,26 @@ public class EmplyeeWages {
 				System.out.println("integer generated - "+employeeCheck);
 				
 
-				if(employeeCheck == IS_FULL_TIME){
-					System.out.println("Employee is full time");
-					totalHours=8;
+				/*
+				 * Switch Case
+				 */
+				switch(employeeCheck) {
+				case IS_FULL_TIME :
+						System.out.println("Employee is full time");
+						totalHours=8;
+						break;
+				case IS_PART_TIME:
+						System.out.println("Employee is part time");
+						totalHours=4;
+						break;
+				default :
+						System.out.println("employee absent");
+						break;
 				}
-				else if(employeeCheck == IS_PART_TIME){
-					System.out.println("Employee is part time");
-					totalHours=4;
-				}
-				else {
-					System.out.println("employee not present");
-				}
+				daily_wage=totalHours*EMPLOYEE_WAGE_PER_HOUR;
+				System.out.println("daily wage - "+daily_wage);
 				
-				System.out.println("wage - "+totalHours*EMPLOYEE_WAGE_PER_HOUR);
-				
+					
 	}
 
 }
