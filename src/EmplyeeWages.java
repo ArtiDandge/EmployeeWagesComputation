@@ -15,14 +15,15 @@ public class EmplyeeWages {
 			public static final int IS_FULL_TIME = 1;
 			public static final int IS_PART_TIME= 2;
 			public static final int EMPLOYEE_WAGE_PER_HOUR = 20;
-		
+			public static final int WORKING_DAYS_PER_MONTH=20;
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		// Variables
 				int totalHours=0;
 				int daily_wage=0;
-			
+				int monthly_wage=0;
 		System.out.println("Welcome to Employee Wage Computation Program");
 		
 		// TYPE CASTING - external
@@ -47,8 +48,9 @@ public class EmplyeeWages {
 						break;
 				}
 				daily_wage=totalHours*EMPLOYEE_WAGE_PER_HOUR;
+				monthly_wage=daily_wage*WORKING_DAYS_PER_MONTH;
 				System.out.println("daily wage - "+daily_wage);
-				
+				System.out.println("montly wage - "+monthly_wage);
 					
 	}
 
