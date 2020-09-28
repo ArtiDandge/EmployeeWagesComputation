@@ -30,7 +30,7 @@ public class EmplyeeWages {
 				System.out.println("integer generated - "+employeeCheck);
 				
 				if(employeeCheck == IS_PRESENT){
-					System.out.println("Employee is part time");
+					System.out.println("Employee is present");
 					System.out.println("Employee daily wages "+totalHours*EMPLOYEE_WAGE_PER_HOUR);
 				}
 				else {
