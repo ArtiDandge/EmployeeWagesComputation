@@ -29,20 +29,14 @@ public class EmplyeeWages {
 				int employeeCheck = (int) (Math.floor(Math.random()*10)%3);
 				System.out.println("integer generated - "+employeeCheck);
 				
-<<<<<<< HEAD
-				if(employeeCheck == IS_PRESENT){
-					System.out.println("Employee is present");
-					System.out.println("Employee daily wages "+totalHours*EMPLOYEE_WAGE_PER_HOUR);
-=======
-				
-				if(employeeCheck == IS_FULL_TIME) {
+
+				if(employeeCheck == IS_FULL_TIME){
 					System.out.println("Employee is full time");
 					totalHours=8;
 				}
 				else if(employeeCheck == IS_PART_TIME){
 					System.out.println("Employee is part time");
 					totalHours=4;
->>>>>>> d0d45afd09dab566a512cd11aa75d7c90843687d
 				}
 				else {
 					System.out.println("employee not present");
