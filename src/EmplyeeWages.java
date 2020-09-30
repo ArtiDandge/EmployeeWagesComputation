@@ -12,45 +12,7 @@ public class EmplyeeWages {
 			public static final int MAX_WORKING_HOURS=100;
 			public static final int NUM_OF_WORKING_DAYS=2;
 			public static final int MAX_HRS_IN_MONTH=10;
-		// Variables
-			int totalHours=0;
-			int totalDays=0;
-			int daily_wage=0;
-			int monthly_wage=0;
-			int wages=0;
-			int employeeCheck=0;
-			
-			//get wages till max condition reaches
-			public void empWages() {	
-			int employeeCheck = (int) (Math.floor(Math.random()*10)%3);
-			System.out.println("integer generated - "+employeeCheck);
-					//return 	employeeCheck;
-				switch(employeeCheck) {
-				case IS_FULL_TIME :
-						System.out.println("Employee is full time");
-						totalHours=8;
-						break;
-				case IS_PART_TIME:
-						System.out.println("Employee is part time");
-						totalHours=4;
-						break;
-				default :
-						System.out.println("employee absent");
-						break;
-				}
-						daily_wage=totalHours*EMPLOYEE_WAGE_PER_HOUR;
-						monthly_wage=daily_wage*WORKING_DAYS_PER_MONTH;
-						System.out.println("daily wage - "+daily_wage);
-						System.out.println("montly wage - "+monthly_wage);
-						System.out.println("Wages till day and hours reach at max condition");
-						while(totalHours < MAX_WORKING_HOURS && totalDays < MAX_WORKING_DAYS) {
-								totalHours+=1;
-								totalDays+=1;
-								wages=totalHours*totalDays*EMPLOYEE_WAGE_PER_HOUR;
-								System.out.println("wages - "+wages);
-						}
-			}
-			
+
 			//get wages from class method
 			public static int computeEmpWage(){
 	        //variables
@@ -86,7 +48,6 @@ public class EmplyeeWages {
 				        // TODO Auto-generated method stub
 				        System.out.println("Welcome to Employee Wage Computation Program");
 				        EmplyeeWages emp = new EmplyeeWages();
-				        emp.empWages();
 				        EmplyeeWages.computeEmpWage();
 			
 			}
