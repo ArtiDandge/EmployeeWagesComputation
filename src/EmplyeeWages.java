@@ -6,24 +6,21 @@ public class EmplyeeWages {
 		// Constants
 			public static final int IS_FULL_TIME = 1;
 			public static final int IS_PART_TIME= 2;
-			public static final int EMPLOYEE_WAGE_PER_HOUR = 20;
-			public static final int WORKING_DAYS_PER_MONTH=20;
-			public static final int MAX_WORKING_DAYS=20;
-			public static final int MAX_WORKING_HOURS=100;
-			public static final int NUM_OF_WORKING_DAYS=2;
-			public static final int MAX_HRS_IN_MONTH=10;
-
+			
+			
 			//get wages from class method
-			public static int computeEmpWage(){
-	        //variables
-	        int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
-	        //Computation
-	        System.out.println("------------------------------------------------");
-	        System.out.println("Wage based on work hours");
-	        while (totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS){
-                 		totalWorkingDays++;
-	                   	int empCheck = (int) Math.floor(Math.random()*10)%3;
-	                    switch (empCheck){
+			public static int computeEmpWage(String company, int EMPLOYEE_WAGE_PER_HOUR,int MAX_WORKING_DAYS_PER_MONTH, int MAX_WORKING_HOURS_PER_DAY){
+				//variables
+				int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
+				System.out.println("------------------------------------------------");
+				System.out.println("Wages for "+ company);
+	        
+				//calculate wages till max condition given
+				while (totalEmpHrs <= MAX_WORKING_DAYS_PER_MONTH && totalWorkingDays < MAX_WORKING_HOURS_PER_DAY){
+                 	totalWorkingDays++;
+                 	//employee presence check
+	                int empCheck = (int) Math.floor(Math.random()*10)%3;
+	                switch (empCheck){
 	                    case IS_PART_TIME:
 	                      		empHrs = 4;
 	                            break;
@@ -33,12 +30,13 @@ public class EmplyeeWages {
 	                    default:
 	                            empHrs = 0;
 
-	                        }
+	                }
+	                	//compute total hours
 	                    totalEmpHrs += empHrs;
 	                    System.out.println("Day : "+ totalWorkingDays + "Emp Hr : "+empHrs);
-	                	}
+				}
 	                	int totalEmpWage = totalEmpHrs * EMPLOYEE_WAGE_PER_HOUR;
-	                	System.out.println("Total Employee Wage: " + totalEmpWage);
+	                	System.out.println("Total Employee Wage of "+company+"  " + totalEmpWage);
 	                	return totalEmpWage;
 	        }
 	             
@@ -47,8 +45,8 @@ public class EmplyeeWages {
 		
 				        // TODO Auto-generated method stub
 				        System.out.println("Welcome to Employee Wage Computation Program");
-				        EmplyeeWages emp = new EmplyeeWages();
-				        EmplyeeWages.computeEmpWage();
+				        EmplyeeWages.computeEmpWage("Relience", 20, 25, 4);
+				        EmplyeeWages.computeEmpWage("BigBazar", 10, 20, 6);
 			
 			}
 
