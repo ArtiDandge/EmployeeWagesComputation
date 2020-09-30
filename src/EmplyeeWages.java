@@ -17,20 +17,20 @@ public class EmplyeeWages {
 	        
 				//calculate wages till max condition given
 				while (totalEmpHrs <= MAX_WORKING_DAYS_PER_MONTH && totalWorkingDays < MAX_WORKING_HOURS_PER_DAY){
-                 	totalWorkingDays++;
-                 	//employee presence check
-	                int empCheck = (int) Math.floor(Math.random()*10)%3;
-	                switch (empCheck){
-	                    case IS_PART_TIME:
+                 		totalWorkingDays++;
+                 		//employee presence check
+                 		int empCheck = (int) Math.floor(Math.random()*10)%3;
+                 		switch (empCheck){
+                 			case IS_PART_TIME:
 	                      		empHrs = 4;
 	                            break;
-	                    case IS_FULL_TIME:
+                 			case IS_FULL_TIME:
 	                            empHrs = 8;
 	                            break;
-	                    default:
+                 			default:
 	                            empHrs = 0;
 
-	                }
+                 		}
 	                	//compute and display total hours  
 	                    totalEmpHrs += empHrs;
 	                    System.out.println("Day : " + totalWorkingDays + ", Emp Hours : "+empHrs);
@@ -46,9 +46,10 @@ public class EmplyeeWages {
 		
 				        // TODO Auto-generated method stub
 				        System.out.println("Welcome to Employee Wage Computation Program");
-				        //passing company name, emp wages per hour, max woking days and max woking hours to method
+				        //passing company name, employee wages per hour, max working days and max working hours to method
 				        EmplyeeWages.computeEmpWage("Relience", 20, 25, 4);
 				        EmplyeeWages.computeEmpWage("BigBazar", 10, 20, 6);
+				        EmplyeeWages.computeEmpWage("D-mart", 15, 21, 8);
 			
 			}
 
