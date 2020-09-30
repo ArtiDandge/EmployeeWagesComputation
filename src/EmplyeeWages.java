@@ -47,8 +47,8 @@ public class EmplyeeWages {
 				        // TODO Auto-generated method stub
 				        System.out.println("Welcome to Employee Wage Computation Program");
 				        //passing company name, employee wages per hour, max working days and max working hours to method
-				        EmplyeeWages.computeEmpWage("Relience", 20, 25, 4);
-				        EmplyeeWages.computeEmpWage("BigBazar", 10, 20, 6);
+				        EmplyeeWages.computeEmpWage("Relience", 20, 25, 7);
+				        EmplyeeWages.computeEmpWage("BigBazar", 10, 20, 9);
 				        EmplyeeWages.computeEmpWage("D-mart", 15, 21, 8);
 			
 			}
