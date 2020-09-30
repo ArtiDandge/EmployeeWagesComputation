@@ -31,10 +31,11 @@ public class EmplyeeWages {
 	                            empHrs = 0;
 
 	                }
-	                	//compute total hours
+	                	//compute and display total hours  
 	                    totalEmpHrs += empHrs;
-	                    System.out.println("Day : "+ totalWorkingDays + "Emp Hr : "+empHrs);
+	                    System.out.println("Day : " + totalWorkingDays + ", Emp Hours : "+empHrs);
 				}
+						//compute and display total employee wages 
 	                	int totalEmpWage = totalEmpHrs * EMPLOYEE_WAGE_PER_HOUR;
 	                	System.out.println("Total Employee Wage of "+company+"  " + totalEmpWage);
 	                	return totalEmpWage;
@@ -45,6 +46,7 @@ public class EmplyeeWages {
 		
 				        // TODO Auto-generated method stub
 				        System.out.println("Welcome to Employee Wage Computation Program");
+				        //passing company name, emp wages per hour, max woking days and max woking hours to method
 				        EmplyeeWages.computeEmpWage("Relience", 20, 25, 4);
 				        EmplyeeWages.computeEmpWage("BigBazar", 10, 20, 6);
 			
