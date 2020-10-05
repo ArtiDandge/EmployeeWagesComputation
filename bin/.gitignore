@@ -1,3 +1,7 @@
 /EmpWageBuilderArray.class
 /CompanyEmpWage.class
 /EmplyeeWages.class
+/EmployeeWage.class
+/IComputeEmpWage.class
+/testEmpWageInterface.class
+/EmpWageBuilder.class
