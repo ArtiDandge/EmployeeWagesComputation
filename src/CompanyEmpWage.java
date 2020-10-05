@@ -19,6 +19,7 @@ class CompanyEmpWage{
 			this.totalEmpWage = totalWage;
 		}
 		 public String toString() {
+			 
 	 		return "Total Employee Wage of "+company+" is :" + totalEmpWage;
 	
 	     }
